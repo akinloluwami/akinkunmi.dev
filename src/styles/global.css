@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+  font-family: "Work Sans";
+}
+
+a {
+  color: #b6aeaa;
+  transition: all ease-in 500;
+  &:hover {
+    color: #f5a6e6;
+    text-decoration: underline;
+    transition: all ease-in 500;
+  }
+}
