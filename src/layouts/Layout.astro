@@ -1,4 +1,8 @@
 ---
+import Navbar from '../components/Navbar.astro';
+import Header from "../components/Header.astro"
+
+import "../styles/global.css"
 interface Props {
 	title: string;
 }
@@ -15,36 +19,13 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://kit.fontawesome.com/5d11b56c09.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-[#1b1a18] text-white">
+		<Navbar/>
+		<div class="max-w-screen-md mx-auto px-5">
+			<Header/>
+			<slot/>
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
