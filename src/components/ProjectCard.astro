@@ -1,0 +1,44 @@
+---
+interface Props {
+	name: string;
+	description: string;
+	website?: string;
+	github?:string
+	tags?:string[]
+	status?:string
+}
+
+const {name,description,website,github,tags, status  } = Astro.props;
+---
+
+<div class="flex flex-col gap-y-2">
+	<h3 class="text-xl font-medium">{name}
+{status &&
+<sup class="text-sm font-normal text-gray-400">({status})</sup>
+
+}
+
+	</h3>
+	
+	<p class="text-[#B6AEAA]">{description}</p>
+
+	<div class="flex items-center gap-x-2 text-sm">
+		{tags && tags.map((tag)=>(
+			<p class="bg-[#B6AEAA]/10 text-white px-2 py-1">{tag}</p>
+		))}
+	</div>
+
+	<div class="flex items-center gap-x-3">
+			{website&&
+			<a href={website} target="_blank">
+				<i class="fa-solid fa-up-right-from-square"></i>
+			</a>
+			}
+			
+			{github &&
+			<a href={github} target="_blank">
+				<i class="fa-brands fa-github"></i>
+			</a>
+			}
+	</div>
+</div>
