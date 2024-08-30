@@ -22,7 +22,7 @@ const {name,description,website,github,tags, status  } = Astro.props;
 	
 	<p class="text-[#B6AEAA]">{description}</p>
 
-	<div class="flex items-center gap-x-2 text-sm">
+	<div class="flex items-center gap-x-2 text-xs">
 		{tags && tags.map((tag)=>(
 			<p class="bg-[#B6AEAA]/10 text-white px-2 py-1">{tag}</p>
 		))}
