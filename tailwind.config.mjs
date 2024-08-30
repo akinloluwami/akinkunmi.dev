@@ -7,7 +7,7 @@ export default {
         "black-001": "#111111",
         "gray-001": "#B6AEAA",
         "off-white": "#e9e1e1",
-        accent: "",
+        accent: "#f5a6e6",
       },
     },
   },
