@@ -9,6 +9,25 @@ interface Props {
 
 export const projects: Props[] = [
   {
+    name: "Destino",
+    description: "File-based routing framework based on Express.js.",
+    website: "https://destino.run",
+    github: "https://github.com/akinloluwami/destino",
+    status: "wip",
+  },
+  {
+    name: "Audiencc",
+    description:
+      "Waitlist and email capture tool for building engaged communities.",
+    website: "https://www.audiencc.com",
+  },
+  {
+    name: "Dropp",
+    description:
+      "Instant file-sharing tool for easy uploads and shareable links.",
+    website: "https://www.dropp.cloud",
+  },
+  {
     name: "Sooner",
     description: "Codetime tracking for developers and software teams.",
     website: "https://www.sooner.run",
@@ -25,15 +44,15 @@ export const projects: Props[] = [
   {
     name: "UploadFly",
     description: "Really simple file uploads infrastructure.",
-    website: "https://www.uploadfly.co",
-    github: "https://github.com/sooner-run/sooner",
+    // website: "https://www.uploadfly.co",
+    github: "https://github.com/uploadfly/uploadfly",
     tags: ["TypeScript", "S3", "Next.js", "TailwindCSS", "MySQL", "Prisma"],
   },
   {
     name: "LogDrop",
     description: "API analytics, logging, monitoring and alerts for NodeJS.",
-    website: "https://www.sooner.run",
-    github: "https://github.com/akinkloluwami/logdrop",
+    // website: "https://www.logdrop.co",
+    github: "https://github.com/akinloluwami/logdrop",
     tags: ["TypeScript", "Next.js", "TailwindCSS", "Postgres", "Prisma"],
   },
   {
