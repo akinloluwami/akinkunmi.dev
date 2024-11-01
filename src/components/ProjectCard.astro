@@ -11,8 +11,8 @@ interface Props {
 const {name,description,website,github,tags, status  } = Astro.props;
 ---
 
-<div class="flex flex-col gap-y-3">
-	<h3 class="text-xl font-medium">{name}
+<div class="flex flex-col gap-y-1">
+	<h3 class="text-lg font-medium">{name}
 {status &&
 <sup class="text-sm font-normal text-gray-400">({status})</sup>
 
@@ -22,21 +22,23 @@ const {name,description,website,github,tags, status  } = Astro.props;
 	
 	<p class="text-gray-001">{description}</p>
 
-	<div class="flex items-center gap-2 text-xs flex-wrap">
+	<!-- <div class="flex items-center gap-2 text-xs flex-wrap">
 		{tags && tags.map((tag)=>(
 			<p class="bg-gray-001/10 px-2 py-1">{tag}</p>
 		))}
-	</div>
+	</div> -->
 
 	<div class="flex items-center gap-x-3">
 			{website&&
-			<a href={website} target="_blank">
-				<i class="fa-solid fa-up-right-from-square"></i>
+			<a href={website} target="_blank" class="bg-gray-001/10 px-2 py-1">
+				Website
+				<i class="fa-solid fa-up-right-from-square text-sm"></i>
 			</a>
 			}
 			
 			{github &&
-			<a href={github} target="_blank">
+			<a href={github} target="_blank" class="bg-gray-001/10 px-2 py-1">
+				GitHub
 				<i class="fa-brands fa-github"></i>
 			</a>
 			}
