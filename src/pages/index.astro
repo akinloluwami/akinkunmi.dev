@@ -1,23 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from "astro:content";
 import ProjectCard from '../components/ProjectCard.astro';
 import {projects} from "../content/projects"
+import More from '../components/More.astro';
+import Footer from "../components/Footer.astro"
 ---
 
 
 <Layout title="Akinkunmi.">
 	<main>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et tenetur praesentium saepe at laborum quam atque velit, ad neque fugit aliquam odio corrupti dignissimos quasi explicabo, laudantium minus sapiente quia alias necessitatibus mollitia earum? Optio neque sequi et odio fuga beatae aliquam iste, libero natus repellendus reprehenderit ipsam doloremque.</p>
+		<p>
+			Programmer.
+		</p>
 
 		<div class="mt-10">
-			<h3 class="text-3xl font-medium">Projects</h3>
-			<div class="flex flex-col gap-y-14 mt-5">
+			<h3 class="text-2xl font-medium">Projects</h3>
+			<div class="flex flex-col gap-y-7 mt-5">
 				{projects.map((project) => <ProjectCard {...project} />)}
 
 			</div>
 		</div>
-
+<More/>
+<Footer/>
 	</main>
 </Layout>
 
