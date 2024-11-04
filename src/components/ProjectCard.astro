@@ -12,15 +12,15 @@ const {name,description,website,github,tags, status  } = Astro.props;
 ---
 
 <div class="flex flex-col gap-y-1">
-	<h3 class="text-lg font-medium">{name}
+	<h3 class="font-medium">{name}
 {status &&
-<sup class="text-sm font-normal text-gray-400">({status})</sup>
+<sup class="text-xs font-normal text-gray-400">({status})</sup>
 
 }
 
 	</h3>
 	
-	<p class="text-gray-001">{description}</p>
+	<p class="text-gray-001 text-sm">{description}</p>
 
 	<!-- <div class="flex items-center gap-2 text-xs flex-wrap">
 		{tags && tags.map((tag)=>(
@@ -28,7 +28,7 @@ const {name,description,website,github,tags, status  } = Astro.props;
 		))}
 	</div> -->
 
-	<div class="flex items-center gap-x-3">
+	<div class="flex items-center gap-x-3 text-sm">
 			{website&&
 			<a href={website} target="_blank" class="bg-gray-001/10 px-2 py-1">
 				Website
