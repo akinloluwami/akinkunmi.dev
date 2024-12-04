@@ -11,7 +11,7 @@ export const projects: Props[] = [
   {
     name: "Destino",
     description: "File-based routing framework based on Express.js.",
-    // website: "https://destino.run",
+    website: "https://destino.run",
     github: "https://github.com/akinloluwami/destino",
     status: "wip",
   },
