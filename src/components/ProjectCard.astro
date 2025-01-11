@@ -3,12 +3,13 @@ interface Props {
 	name: string;
 	description: string;
 	website?: string;
+ twitter?: string;
 	github?:string
 	tags?:string[]
 	status?:string
 }
 
-const {name,description,website,github,tags, status  } = Astro.props;
+const {name,description,website,github, twitter,tags, status  } = Astro.props;
 ---
 
 <div class="flex flex-col gap-y-1">
@@ -40,6 +41,13 @@ const {name,description,website,github,tags, status  } = Astro.props;
 			<a href={github} target="_blank" class="bg-gray-001/10 px-2 py-1">
 				GitHub
 				<i class="fa-brands fa-github"></i>
+			</a>
+			}
+
+{twitter &&
+			<a href={twitter} target="_blank" class="bg-gray-001/10 px-2 py-1">
+				Twitter
+				<i class="fa-brands fa-twitter"></i>
 			</a>
 			}
 	</div>
