@@ -11,7 +11,7 @@ export const projects: Props[] = [
 {
     name: "Quv",
     description: "Decentralized vaults transforming memecoins into SOL rewards. Quantum-secure, AI-optimized, and built for exploring DeFAI.",
-    website: https://x.com/officialquv",
+    website: "https://x.com/officialquv",
   },
   {
     name: "Destino",
