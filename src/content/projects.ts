@@ -9,11 +9,6 @@ interface Props {
 }
 
 export const projects: Props[] = [
-{
-    name: "Quv",
-    description: "Decentralized vaults transforming memecoins into SOL rewards. Quantum-secure, AI-optimized, and built for exploring DeFAI.",
-    twitter: "https://x.com/officialquv",
-  },
   {
     name: "Destino",
     description: "File-based routing framework based on Express.js.",
