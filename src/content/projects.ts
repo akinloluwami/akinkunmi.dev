@@ -12,7 +12,7 @@ export const projects: Props[] = [
   {
     name: "NotDatabase",
     description: "The easiest schema-based type-safe document database.",
-    website: "https://notdatabase.com",
+    website: "https://www.notdatabase.com",
     github: "https://github.com/akinloluwami/notdatabase",
   },
   {
