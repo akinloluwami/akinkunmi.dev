@@ -3,45 +3,30 @@ interface Props {
   description: string;
   website?: string;
   github?: string;
-  twitter?:string;
+  twitter?: string;
   tags?: string[];
   status?: string;
 }
 
 export const projects: Props[] = [
   {
+    name: "NotDatabase",
+    description: "The easiest schema-based type-safe document database.",
+    website: "https://notdatabase.com",
+    github: "https://github.com/akinloluwami/notdatabase",
+  },
+  {
+    name: "Dropp",
+    description:
+      "Save, organize, reuse and share the snippets that power your workflow.",
+    website: "https://www.dropp.cloud",
+  },
+  {
     name: "Destino",
     description: "File-based routing framework based on Express.js.",
     website: "https://destino.run",
     github: "https://github.com/akinloluwami/destino",
     status: "wip",
-  },
-  {
-    name: "Audiencc",
-    description:
-      "Waitlist and email capture tool for building engaged communities.",
-    website: "https://www.audiencc.com",
-    status: "wip",
-  },
-  {
-    name: "Dropp",
-    description:
-      "Instant file-sharing tool for easy uploads and shareable links.",
-    website: "https://www.dropp.cloud",
-  },
-  {
-    name: "Sooner",
-    description: "Codetime tracking for developers and software teams.",
-    website: "https://www.sooner.run",
-    github: "https://github.com/sooner-run/sooner",
-    tags: [
-      "TypeScript",
-      "Next.js",
-      "Hono",
-      "DrizzleORM",
-      "TailwindCSS",
-      "Postgres",
-    ],
   },
   {
     name: "UploadFly",
@@ -56,12 +41,5 @@ export const projects: Props[] = [
     // website: "https://www.logdrop.co",
     github: "https://github.com/akinloluwami/logdrop",
     tags: ["TypeScript", "Next.js", "TailwindCSS", "Postgres", "Prisma"],
-  },
-  {
-    name: "Keydown",
-    description: "Minimalist blogging engine.",
-    website: "https://keydown-blog.vercel.app",
-    tags: ["TypeScript", "Next.js", "DrizzleORM", "Postgres", "TailwindCSS"],
-    status: "private + wip",
   },
 ];
