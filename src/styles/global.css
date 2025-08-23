@@ -1,14 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 body {
-  font-family: "IBM Plex Mono";
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e1e;
+  color:#b5b5b5
 }
 
 a {
   color: #b6aeaa;
   transition: all ease-in 500;
   &:hover {
-    color: #f5a6e6;
+    color: #f0f0f0;
     text-decoration: underline;
     transition: all ease-in 500;
   }
+}
+
+p{
+  color:#b5b5b5
 }
