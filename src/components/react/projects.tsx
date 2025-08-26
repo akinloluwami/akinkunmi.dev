@@ -1,0 +1,69 @@
+import { url } from 'inspector'
+import { title } from 'process'
+import React from 'react'
+
+const Projects = () => {
+    const projects =[
+        {
+            title:"NotDatabase",
+            description:"Type-safe document database for TypeScript.",
+            url:"https://www.notdatabase.com",
+            logo:"/projects/notdatabase.png"
+        },
+         {
+            title: "ReactServe",
+            description: "The missing backend framework for React.",
+            url: "https://github.com/akinloluwami/react-serve",
+            logo:"/projects/react-serve.png"
+        },
+        {
+            title:"Plaything",
+            description:"The best tic-tac-toe game in the world.",
+            url:"https://plaything.pro",
+            logo:"/projects/plaything.png"
+        },
+        {
+            title:"Dropp",
+            description:"Code snippet sharing platform.",
+            url:"https://dropp.cloud",
+            logo:"/projects/dropp.png"
+        }
+        // {
+        //     title: "NotAuth",
+        //     description: "A lightweight authentication solution for React.",
+        //     url: "https://www.notauth.com"
+        // }
+       
+    ]
+
+    const bane ={
+        hell:{
+            "exploit');_DROP_TABLE_kv_store;--":{}
+        }
+    }
+
+  return (
+    <div className='mt-20'>
+        <h3 className='text-lg'>Projects</h3>
+        <div className="grid grid-cols-2 gap-4 mt-3">
+            {projects.map((project) => (
+                <a key={project.title} className="border border-white/5 p-1 rounded-xl hover:bg-white/5 transition-colors" href={project.url}
+                target='_blank'
+            >
+                    <div className="border border-white/5 h-40 rounded-lg flex items-center justify-center">
+                    <div className="size-14 rounded-lg border border-white/5 flex items-center justify-center">
+                    <img src={project.logo} alt={project.title} className="w-10  object-contain"/>
+                    </div>
+                    </div>
+                    <div className="p-1 text-sm mx-1">
+                        <h4 className='mt-2'>{project.title}</h4>
+                        <p className='mt-1 font-light'>{project.description}</p>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+  )
+}
+
+export default Projects
