@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Tangerine:regular,700);
+@import url(https://fonts.googleapis.com/css?family=League+Script:regular);ß
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -7,23 +7,13 @@ body {
   color:#b5b5b5
 }
 
-a {
-  color: #b6aeaa;
-  transition: all ease-in 500;
-  &:hover {
-    color: #f0f0f0;
-    text-decoration: underline;
-    transition: all ease-in 500;
-  }
-}
-
 p{
   color:#b5b5b5
 }
 
 .quote {
-  font-family: 'Tangerine', cursive;
-  font-size: 2rem;
+  font-family: 'League Script', cursive;
+  font-size: 1.5rem;
   font-weight: 100;
   color: #f0f0f0;
   border-left: 4px solid #b6aeaa;
