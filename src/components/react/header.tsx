@@ -15,20 +15,20 @@ const Header = () => {
 
   return (
     <div>
-<h1 className='text-3xl mt-20 flex items-center space-x-4'>
+<h1 className='text-3xl lg:mt-20 flex items-center space-x-4'>
   Hello, I am
   <span className='flex items-center space-x-4 ml-2'>
     Akinkunmi.
     <img src="/me.png" alt="Akinkunmi" className='w-10 rotate-6 ml-2 rounded-md hover:-rotate-6 transition-all duration-500 ease-in-out'/>
   </span>
 </h1>
-        <div className="mt-10 space-y-6 text-lg font-light">
+        <div className="mt-10 space-y-6 text-xl font-light">
           <p>  Welcome to my corner of the internet! I have a passion for solving problems by building impactful software.</p>
 
           <p>I'm currently working on a new <span className="inline-flex items-center align-middle">
             <img src="/icons/react_dark.svg" alt="React" className="w-5 mr-1" />
             React
-            </span> framework - <a href="https://github.com/akinloluwami/react-serve">ReactServe</a>.</p>
+            </span> framework - <a href="https://github.com/akinloluwami/react-serve" target='_blank' className='text-[#6558DC] hover:underline font-semibold'>ReactServe</a>.</p>
 
           <p>You'll mostly find me working within the <span className="inline-flex items-center align-middle">
             <img src="/icons/typescript.svg" alt="TypeScript" className="w-5 mr-1" />
@@ -40,7 +40,7 @@ const Header = () => {
             </span>
              {" "}ecosystem, but I'm also interested in other languages such as Elixir, Rust, and Go.</p>
 
-  <p className=''>
+  <p className='italic text-gray-600'>
              <q>My goal is to be as cracked of an engineer as I can be.</q>
          </p>
  
