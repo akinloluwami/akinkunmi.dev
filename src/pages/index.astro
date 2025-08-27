@@ -1,31 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import {projects} from "../content/projects"
-import Footer from "../components/Footer.astro"
+import Header from '../components/react/header'
+import Projects from '../components/react/projects'
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/react/footer'
 ---
-
-
-<Layout title="Akinkunmi.">
-	<main>
-		<p class="text-sm">
-			Welcome to my corner of the internet! I’m Akinkunmi. I have a passion for solving problems by building impactful software.
-<br> <br>
-			<q>My goal is to be as cracked of an engineer as I can be.</q> <br> <br>
-			
-			I'm currently working on a new database - <a href="http://www.notdatabase.com" target="_blank" rel="noopener noreferrer">NotDatabase</a>.
-			<br> <br>
-			You'll mostly find me working within the Typescript/JavaScript ecosystem, but I'm also interested in other languages such as <i>Elixir</i>, <i>Rust</i>, and <i>Go</i>.
-
-		</p>
-
-		<div class="mt-10">
-			<h3 class="text-xl font-medium">Projects</h3>
-			<div class="flex flex-col gap-y-7 mt-5">
-				{projects.map((project) => <ProjectCard {...project} />)}
-
-			</div>
-		</div>
-<Footer/>
-	</main>
+<Layout title='Akinkunmi'>
+	<Header />
+	<Projects />
+	<Footer />
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Header from "../components/Header.astro"
+import PostHog from '../components/posthog.astro';
 
 import "../styles/global.css"
 interface Props {
@@ -16,13 +17,13 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Akinkunmi" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/me.png" />
 		<meta name="generator" content="Akinkunmi" />
 		<title>{title}</title>
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://akinkunmi.dev" />
+		<meta property="og:url" content="https://akinkunmi.dev" />	
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content="Akinkunmi" />
 		<meta property="og:image" content="/og.png" />
@@ -33,26 +34,13 @@ const { title } = Astro.props;
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content="Akinkunmi" />
 		<meta property="twitter:image" content="/og.png" />
-		
-		<script src="https://kit.fontawesome.com/5d11b56c09.js" crossorigin="anonymous"></script>
-		
-<script>
-	//@ts-ignore
-	window.op = window.op||function(...args){(window.op.q=window.op.q||[]).push(args);};
-	//@ts-ignore	
-	window.op('init', {
-		  clientId: '2bc579dc-7e1c-4e92-961c-3f19d10dc3ac',
-		  trackScreenViews: true,
-		  trackOutgoingLinks: true,
-		  trackAttributes: true,
-		});
-	  </script>
-	  <script src="https://openpanel.dev/op1.js" defer async></script>
+
+		<PostHog/>
+	  
 	</head>
 	<body class="bg-black-001 text-off-white pb-10">
 		<!-- <Navbar/> -->
-		<div class="max-w-screen-md mx-auto px-5">
-			<Header/>
+		<div class="max-w-2xl mx-auto px-5 py-10">
 			<slot/>
 		</div>
 	</body>
