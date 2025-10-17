@@ -13,7 +13,7 @@ const Projects = () => {
          {
             title: "ReactServe",
             description: "The missing backend framework for React.",
-            url: "https://github.com/akinloluwami/react-serve",
+            url: "https://react-serve.run",
             logo:"/projects/react-serve.png"
         },
         {

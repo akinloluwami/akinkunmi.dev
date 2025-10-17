@@ -28,7 +28,7 @@ const Header = () => {
           <p>I'm currently working on a new <span className="inline-flex items-center align-middle">
             <img src="/icons/react_dark.svg" alt="React" className="w-5 mr-1" />
             React
-            </span> framework - <a href="https://github.com/akinloluwami/react-serve" target='_blank' className='text-[#6558DC] hover:underline font-semibold'>ReactServe</a>.</p>
+            </span> framework - <a href="https://react-serve.run" target='_blank' className='text-[#6558DC] hover:underline font-semibold'>ReactServe</a>.</p>
 
           <p>You'll mostly find me working within the <span className="inline-flex items-center align-middle">
             <img src="/icons/typescript.svg" alt="TypeScript" className="w-5 mr-1" />
