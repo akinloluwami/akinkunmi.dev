@@ -21,12 +21,6 @@ const Projects = () => {
             description:"The best tic-tac-toe game in the world.",
             url:"https://plaything.pro",
             logo:"/projects/plaything.png"
-        },
-        {
-            title:"Dropp",
-            description:"Code snippet sharing platform.",
-            url:"https://dropp.cloud",
-            logo:"/projects/dropp.png"
         }
         // {
         //     title: "NotAuth",
