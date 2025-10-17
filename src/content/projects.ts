@@ -16,12 +16,6 @@ export const projects: Props[] = [
     github: "https://github.com/akinloluwami/notdatabase",
   },
   {
-    name: "Dropp",
-    description:
-      "Save, organize, reuse and share the snippets that power your workflow.",
-    website: "https://www.dropp.cloud",
-  },
-  {
     name: "Destino",
     description: "File-based routing framework based on Express.js.",
     website: "https://destino.run",
