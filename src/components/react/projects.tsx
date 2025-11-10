@@ -5,6 +5,12 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
+      title: "PathWatch",
+      description: "API observability and monitoring tool.",
+      url: "https://github.com/akinloluwami/pathwatch",
+      //   logo: "/projects/pathwatch.png",
+    },
+    {
       title: "NotDatabase",
       description: "Type-safe document database for TypeScript.",
       url: "https://www.notdatabase.com",
@@ -16,12 +22,7 @@ const Projects = () => {
       url: "https://react-serve.run",
       logo: "/projects/react-serve.png",
     },
-    {
-      title: "PathWatch",
-      description: "API observability and monitoring tool.",
-      url: "https://github.com/akinloluwami/pathwatch",
-      //   logo: "/projects/pathwatch.png",
-    },
+
     {
       title: "Plaything",
       description: "The best tic-tac-toe game in the world.",
