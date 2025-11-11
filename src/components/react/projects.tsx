@@ -1,7 +1,3 @@
-import { url } from "inspector";
-import { title } from "process";
-import React from "react";
-
 const Projects = () => {
   const projects = [
     {
