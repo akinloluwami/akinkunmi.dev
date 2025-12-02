@@ -1,6 +1,12 @@
 const Projects = () => {
   const projects = [
     {
+      title: "FormDrop",
+      description: "Super simple headless form backend.",
+      url: "https://formdrop.co",
+      logo: "/projects/formdrop.png",
+    },
+    {
       title: "PathWatch",
       description: "API observability and monitoring tool.",
       url: "https://github.com/akinloluwami/pathwatch",
