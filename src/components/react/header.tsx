@@ -16,8 +16,6 @@ const Header = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-medium text-white mb-8">Akinkunmi</h1>
-
       <div className="space-y-4 text-zinc-400 leading-relaxed">
         <p>
           I'm Akinkunmi, also know as Titanium. <br /> Software engineer
@@ -37,7 +35,7 @@ const Header = () => {
         </p>
 
         <p>
-          I work primarily with TypeScript and JavaScript, but I'm also
+          I work primarily with TypeScript and the JS ecosystem, but I'm also
           exploring Elixir, Rust, and Go.
         </p>
 

@@ -17,7 +17,15 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Akinkunmi" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/me.png" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='hsl(0,70%,50%)'/></svg>" />
+		<script is:inline>
+			(function() {
+				const hue = Math.floor(Math.random() * 360);
+				const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='hsl(${hue},70%,50%)'/></svg>`;
+				const link = document.querySelector("link[rel='icon']");
+				if (link) link.href = "data:image/svg+xml," + encodeURIComponent(svg);
+			})();
+		</script>
 		<meta name="generator" content="Akinkunmi" />
 		<title>{title}</title>
 		
@@ -39,8 +47,8 @@ const { title } = Astro.props;
 	  
 	</head>
 	<body class="bg-black-001 text-off-white pb-10 min-h-screen">
-		<!-- <Navbar/> -->
 		<div class="max-w-xl mx-auto px-6 py-16">
+			<Navbar />
 			<slot/>
 		</div>
 	</body>

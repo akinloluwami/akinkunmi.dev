@@ -1,35 +1,35 @@
 ---
 const currentPath = Astro.url.pathname;
 
-const pages  =[
+const pages = [
     {
-        title:"Home",
-        href:"/"
+        title: "Home",
+        href: "/"
     },
     {
-        title:"Projects",
-        href:"/projects"
+        title: "Blog",
+        href: "/blog"
     },
     {
-        title:"Blog",
-        href:"/blog"
+        title: "Thoughts",
+        href: "/thoughts"
     },
     {
-        title:"Guestbook",
-        href:"/guestbook"
+        title: "Guestbook",
+        href: "/guestbook"
     },
 ]
-
 ---
 
-<nav class="">
-    <div class="max-w-screen-md mx-auto p-5">
-        <div class="flex items-center gap-x-4">
-            {pages.map(page=>(
-                <a href={page.href} class={currentPath === page.href ?"text-accent":""}
-            >{page.title}</a>
-            
-            ))}
-        </div>
+<nav class="mb-12">
+    <div class="flex items-center gap-6">
+        {pages.map(page => (
+            <a 
+                href={page.href} 
+                class={currentPath === page.href ? "text-white" : "text-zinc-500 hover:text-zinc-300"}
+            >
+                {page.title}
+            </a>
+        ))}
     </div>
 </nav>

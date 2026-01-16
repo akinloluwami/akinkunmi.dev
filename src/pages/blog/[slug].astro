@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ReactionsWrapper from '../../components/react/ReactionsWrapper';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} - Akinkunmi`}>
+  <article>
+    <a href="/blog" class="text-zinc-500 text-sm mb-6 inline-block">&larr; Back to blog</a>
+    
+    <h1 class="text-2xl font-medium text-white mb-2">{post.data.title}</h1>
+    <time class="text-zinc-600 text-sm block mb-8">
+      {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </time>
+    
+    <div class="prose prose-invert prose-zinc max-w-none">
+      <Content />
+    </div>
+    
+    <ReactionsWrapper slug={post.slug} client:only="react" />
+  </article>
+</Layout>
+
+<style is:global>
+  .prose h2 {
+    @apply text-xl font-medium text-white mt-8 mb-4;
+  }
+  .prose h3 {
+    @apply text-lg font-medium text-white mt-6 mb-3;
+  }
+  .prose p {
+    @apply text-zinc-400 leading-relaxed mb-4;
+  }
+  .prose ul {
+    @apply text-zinc-400 list-disc list-inside mb-4 space-y-1;
+  }
+  .prose ol {
+    @apply text-zinc-400 list-decimal list-inside mb-4 space-y-1;
+  }
+  .prose a {
+    @apply text-white underline underline-offset-4;
+  }
+  .prose code {
+    @apply bg-zinc-800 px-1.5 py-0.5 rounded text-sm;
+  }
+  .prose pre {
+    @apply bg-zinc-900 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  .prose blockquote {
+    @apply border-l-2 border-zinc-700 pl-4 italic text-zinc-500 my-4;
+  }
+</style>
