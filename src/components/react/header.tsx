@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 const Header = () => {
   const links = [
     {
@@ -7,7 +5,7 @@ const Header = () => {
       url: "https://github.com/akinloluwami",
     },
     {
-      title: "Mail",
+      title: "Email",
       url: "mailto:akinkunmioye42@gmail.com",
     },
     {
@@ -18,64 +16,44 @@ const Header = () => {
 
   return (
     <div>
-      <h1 className="text-xl lg:mt-20 flex items-center space-x-4">
-        Hello, I am Akinkunmi.
-      </h1>
-      <div className="mt-10 space-y-6 text-lg font-light">
+      <h1 className="text-2xl font-medium text-white mb-8">Akinkunmi</h1>
+
+      <div className="space-y-4 text-zinc-400 leading-relaxed">
         <p>
-          {" "}
-          Welcome to my corner of the internet! I have a passion for solving
-          problems by building impactful software.
+          I'm Akinkunmi, also know as Titanium. <br /> Software engineer
+          passionate about solving problems through code.
         </p>
 
         <p>
-          I'm currently working on{" "}
+          Currently building{" "}
           <a
-            href="https://github.com/akinloluwami/pathwatch"
+            href="https://outray.dev"
             target="_blank"
-            className="text-[#f25819] hover:underline"
+            className="text-white underline underline-offset-4"
           >
-            PathWatch
+            OutRay
           </a>
           .
         </p>
 
         <p>
-          You'll mostly find me working within the{" "}
-          <span className="inline-flex items-center align-middle">
-            <img
-              src="/icons/typescript.svg"
-              alt="TypeScript"
-              className="w-5 mr-1"
-            />
-            TypeScript
-          </span>
-          /
-          <span className="inline-flex items-center align-middle">
-            <img
-              src="/icons/javascript.svg"
-              alt="JavaScript"
-              className="w-5 mr-1"
-            />
-            JavaScript
-          </span>{" "}
-          ecosystem, but I'm also interested in other languages such as Elixir,
-          Rust, and Go.
+          I work primarily with TypeScript and JavaScript, but I'm also
+          exploring Elixir, Rust, and Go.
         </p>
 
-        <p className="italic text-gray-600">
-          <q>My goal is to be as cracked of an engineer as I can be.</q>
+        <p className="italic text-zinc-500">
+          "My goal is to be as cracked of an engineer as I can be."
         </p>
       </div>
-      <div className="flex items-center space-x-4 mt-10">
+
+      <div className="flex items-center gap-4 mt-8">
         {links.map((link) => (
           <a
             key={link.title}
             href={link.url}
             target="_blank"
-            className="bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 transition-all duration-300 flex items-center gap-x-2"
+            className="text-zinc-400 underline underline-offset-4"
           >
-            <ArrowUpRight />
             {link.title}
           </a>
         ))}

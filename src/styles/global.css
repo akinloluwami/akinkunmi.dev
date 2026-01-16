@@ -1,22 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=League+Script:regular);ß
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap);
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #1e1e1e;
-  color:#b5b5b5
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0a0a0a;
+  color: #a1a1aa;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-p{
-  color:#b5b5b5
-}
-
-.quote {
-  font-family: 'League Script', cursive;
-  font-size: 1.5rem;
-  font-weight: 100;
-  color: #f0f0f0;
-  border-left: 4px solid #b6aeaa;
-  padding-left: 1rem;
-  margin: 0.5rem 0;
+::selection {
+  background-color: #fff;
+  color: #0a0a0a;
 }
