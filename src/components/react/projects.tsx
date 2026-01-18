@@ -1,6 +1,11 @@
 const Projects = () => {
   const projects = [
     {
+      title:"Envii",
+      description: "Backup and restore your environment variables across machines.",
+      url: "https://envii.dev",
+    },
+    {
       title: "OutRay",
       description: "Open-source ngrok alternative.",
       url: "https://outray.dev",
