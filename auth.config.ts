@@ -20,12 +20,14 @@ export default defineConfig({
     jwt({ token, profile }) {
       if (profile) {
         token.githubId = String(profile.id);
+        token.githubUsername = profile.login as string;
       }
       return token;
     },
     session({ session, token }) {
       if (session.user && token.githubId) {
         (session.user as any).id = token.githubId as string;
+        (session.user as any).username = token.githubUsername as string;
       }
       return session;
     },
