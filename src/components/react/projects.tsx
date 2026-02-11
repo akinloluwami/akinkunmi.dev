@@ -1,8 +1,14 @@
 const Projects = () => {
   const projects = [
     {
-      title:"Envii",
-      description: "Backup and restore your environment variables across machines.",
+      title: "FireFlow",
+      description: "Create automated workflows using natural language.",
+      url: "https://fireflow.run",
+    },
+    {
+      title: "Envii",
+      description:
+        "Backup and restore your environment variables across machines.",
       url: "https://envii.dev",
     },
     {
@@ -45,11 +51,11 @@ const Projects = () => {
         {projects.map((project) => (
           <a
             key={project.title}
-            className="block"
+            className="block w-fit"
             href={project.url}
             target="_blank"
           >
-            <h3 className="text-white underline underline-offset-4">
+            <h3 className="text-white underline text-sm underline-offset-4">
               {project.title}
             </h3>
             <p className="text-zinc-500 text-sm mt-1">{project.description}</p>
