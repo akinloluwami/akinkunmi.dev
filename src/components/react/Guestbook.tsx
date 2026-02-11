@@ -32,6 +32,7 @@ export default function Guestbook() {
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [signature, setSignature] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const hasSigned =
     session?.user?.id && entries
@@ -56,6 +57,7 @@ export default function Guestbook() {
     }
 
     setSubmitting(true);
+    setError(null);
     try {
       const res = await fetch("/api/guestbook", {
         method: "POST",
@@ -67,12 +69,13 @@ export default function Guestbook() {
         setShowModal(false);
         setMessage("");
         setSignature(null);
+        setError(null);
       } else {
         const data = await res.json();
-        console.error("Guestbook error:", res.status, data);
+        setError(data.error || "Something went wrong. Please try again.");
       }
     } catch (err) {
-      console.error("Failed to sign guestbook:", err);
+      setError("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -197,6 +200,8 @@ export default function Guestbook() {
               className="h-[150px] w-full rounded-lg border border-zinc-800 mb-4"
               onChange={setSignature}
             />
+
+            {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <div className="flex items-center justify-end gap-3">
               <button
