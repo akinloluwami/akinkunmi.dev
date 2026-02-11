@@ -10,7 +10,7 @@ const Header = () => {
     },
     {
       title: "Twitter",
-      url: "https://twitter.com/xt42io",
+      url: "https://twitter.com/akinkunmi",
     },
   ];
 
