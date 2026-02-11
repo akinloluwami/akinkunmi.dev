@@ -8,4 +8,15 @@ export default defineSchema({
   })
     .index("by_slug", ["slug"])
     .index("by_slug_emoji", ["slug", "emoji"]),
+
+  guestbook: defineTable({
+    message: v.string(),
+    authorName: v.string(),
+    githubId: v.optional(v.string()),
+    authorImage: v.optional(v.string()),
+    signature: v.string(),
+    createdAt: v.number(),
+  })
+    .index("by_created_at", ["createdAt"])
+    .index("by_github_id", ["githubId"]),
 });
