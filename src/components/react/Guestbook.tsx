@@ -146,6 +146,13 @@ export default function Guestbook() {
               <p className="text-white text-sm leading-relaxed mb-4">
                 {entry.message}
               </p>
+              {entry.signature && (
+                <img
+                  src={entry.signature}
+                  alt={`${entry.authorName}'s signature`}
+                  className="w-full h-auto opacity-80 mt-2"
+                />
+              )}
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="min-w-0">
@@ -157,13 +164,6 @@ export default function Guestbook() {
                     </p>
                   </div>
                 </div>
-                {entry.signature && (
-                  <img
-                    src={entry.signature}
-                    alt={`${entry.authorName}'s signature`}
-                    className="w-full h-auto opacity-80 mt-2"
-                  />
-                )}
               </div>
             </div>
           ))
