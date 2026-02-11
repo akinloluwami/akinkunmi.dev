@@ -43,6 +43,7 @@ export const POST: APIRoute = async ({ request }) => {
       message: message.trim(),
       authorName: session.user.name ?? "Anonymous",
       githubId: (session.user as any).id ?? undefined,
+      githubUsername: (session.user as any).username ?? undefined,
       authorImage: session.user.image ?? undefined,
       signature,
     });
