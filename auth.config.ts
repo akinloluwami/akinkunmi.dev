@@ -17,15 +17,15 @@ export default defineConfig({
     }),
   ],
   callbacks: {
-    jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
+    jwt({ token, profile }) {
+      if (profile) {
+        token.githubId = String(profile.id);
       }
       return token;
     },
     session({ session, token }) {
-      if (session.user && token.id) {
-        (session.user as any).id = token.id as string;
+      if (session.user && token.githubId) {
+        (session.user as any).id = token.githubId as string;
       }
       return session;
     },
