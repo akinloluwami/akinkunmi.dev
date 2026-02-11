@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as guestbook from "../guestbook.js";
 import type * as reactions from "../reactions.js";
 
 import type {
@@ -17,6 +18,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  guestbook: typeof guestbook;
   reactions: typeof reactions;
 }>;
 
