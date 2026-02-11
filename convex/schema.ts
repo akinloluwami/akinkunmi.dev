@@ -12,6 +12,7 @@ export default defineSchema({
   guestbook: defineTable({
     message: v.string(),
     authorName: v.string(),
+    githubUsername: v.optional(v.string()),
     githubId: v.optional(v.string()),
     authorImage: v.optional(v.string()),
     signature: v.string(),
