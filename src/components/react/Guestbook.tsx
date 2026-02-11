@@ -80,7 +80,6 @@ export default function Guestbook() {
 
   return (
     <div>
-      {/* Header area */}
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold text-white">Guestbook</h1>
@@ -129,7 +128,6 @@ export default function Guestbook() {
         )}
       </div>
 
-      {/* Entries grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {entries === undefined ? (
           <div className="col-span-full text-zinc-500 text-sm">Loading...</div>
@@ -170,7 +168,6 @@ export default function Guestbook() {
         )}
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div
@@ -182,7 +179,6 @@ export default function Guestbook() {
               Sign my guestbook
             </h2>
 
-            {/* Message */}
             <label className="block text-sm text-zinc-300 mb-2">
               Leave a message
             </label>
@@ -191,10 +187,9 @@ export default function Guestbook() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Write something nice..."
               rows={3}
-              className="w-full bg-zinc-900 border border-zinc-800 rounded-lg p-3 text-white text-sm placeholder-zinc-500 resize-y focus:outline-none focus:border-zinc-600 mb-4"
+              className="w-full bg-transparent border border-zinc-800 rounded-lg p-3 text-white text-sm placeholder-zinc-500 min-h-40 resize-y focus:outline-none focus:border-zinc-600 mb-4"
             />
 
-            {/* Signature pad */}
             <label className="block text-sm text-zinc-300 mb-2">
               Sign Here
             </label>
@@ -203,7 +198,6 @@ export default function Guestbook() {
               onChange={setSignature}
             />
 
-            {/* Actions */}
             <div className="flex items-center justify-end gap-3">
               <button
                 onClick={() => setShowModal(false)}
