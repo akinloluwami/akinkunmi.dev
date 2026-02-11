@@ -39,11 +39,30 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
+    const githubId = (session.user as any).id;
+    const githubUsername = (session.user as any).username;
+    const authorName = session.user.name;
+
+    if (
+      !githubId ||
+      githubId === "undefined" ||
+      !githubUsername ||
+      githubUsername === "undefined" ||
+      !authorName
+    ) {
+      return new Response(
+        JSON.stringify({
+          error: "Invalid session. Please sign out and sign back in.",
+        }),
+        { status: 401, headers: { "Content-Type": "application/json" } },
+      );
+    }
+
     await convex.mutation(api.guestbook.add, {
       message: message.trim(),
-      authorName: session.user.name ?? "Anonymous",
-      githubId: (session.user as any).id ?? undefined,
-      githubUsername: (session.user as any).username ?? undefined,
+      authorName,
+      githubId,
+      githubUsername,
       authorImage: session.user.image ?? undefined,
       signature,
     });
