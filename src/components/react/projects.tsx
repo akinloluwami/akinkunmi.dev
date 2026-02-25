@@ -2,7 +2,7 @@ const Projects = () => {
   const projects = [
     {
       title:"Better Secrets",
-      description:"A better way to manage GitHub Actions secrets",
+      description:"A better way to manage GitHub Actions secrets.",
       url: "https://better-secrets.xyz"
     },
     {
