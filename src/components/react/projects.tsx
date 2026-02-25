@@ -1,6 +1,11 @@
 const Projects = () => {
   const projects = [
     {
+      title:"Better Secrets",
+      description:"A better way to manage GitHub Actions secrets",
+      url: "https://better-secrets.xyz"
+    },
+    {
       title: "FireFlow",
       description: "Create automated workflows using natural language.",
       url: "https://fireflow.run",
