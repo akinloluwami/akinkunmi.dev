@@ -18,7 +18,7 @@ const Header = () => {
     <div>
       <div className="space-y-4 text-zinc-400 leading-relaxed">
         <p>
-          I'm Akinkunmi, also know as Titanium. <br /> Software engineer
+          I'm Akinkunmi, also known as Titanium. <br /> Software engineer
           passionate about solving problems through code.
         </p>
 
