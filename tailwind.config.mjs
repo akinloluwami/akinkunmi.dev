@@ -3,20 +3,20 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["Newsreader", "Georgia", "ui-serif", "serif"],
+      },
       colors: {
-        "black-001": "#0a0a0a",
-        "gray-001": "#71717a",
-        "off-white": "#fafafa",
-        accent: "#f59e0b",
+        "black-001": "#0c0b09",
+        "off-white": "#f5f2eb",
+        muted: "#9a958c",
+        "muted-faint": "#6b6560",
+        hairline: "rgba(245, 242, 235, 0.09)",
+        accent: "#c4b59d",
       },
-      animation: {
-        "fade-in": "fadeIn 0.6s ease-in",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
+      fontSize: {
+        "2xs": ["0.6875rem", { lineHeight: "1.4" }],
       },
     },
   },
