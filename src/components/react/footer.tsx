@@ -29,11 +29,11 @@ const Footer = () => {
   const currentYear = yearToRoman(new Date().getFullYear());
 
   return (
-    <div className="border-t border-zinc-800 pt-4 mt-16">
-      <p className="text-center text-sm text-zinc-600">
-        © {currentYear} <span className="text-red-500">♥</span> Akinkunmi.
+    <footer className="mt-20 sm:mt-24 pt-8 border-t border-hairline">
+      <p className="font-serif text-sm text-muted-faint">
+        © {currentYear} · Akinkunmi
       </p>
-    </div>
+    </footer>
   );
 };
 
