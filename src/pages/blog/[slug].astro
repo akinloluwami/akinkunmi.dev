@@ -17,10 +17,10 @@ const { Content } = await post.render();
 
 <Layout title={`${post.data.title} - Akinkunmi`}>
   <article>
-    <a href="/blog" class="text-zinc-500 text-sm mb-6 inline-block">&larr; Back to blog</a>
+    <a href="/blog" class="text-2xs uppercase tracking-[0.14em] text-muted-faint mb-10 inline-block hover:text-accent transition-colors">&larr; Blog</a>
     
-    <h1 class="text-2xl font-medium text-white mb-2">{post.data.title}</h1>
-    <time class="text-zinc-600 text-sm block mb-8">
+    <h1 class="font-serif text-[clamp(1.75rem,5vw,2.35rem)] font-medium text-off-white leading-snug tracking-tight mb-3">{post.data.title}</h1>
+    <time class="text-2xs uppercase tracking-[0.12em] text-muted-faint block mb-10 pb-8 border-b border-hairline">
       {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
     </time>
     
@@ -34,30 +34,30 @@ const { Content } = await post.render();
 
 <style is:global>
   .prose h2 {
-    @apply text-xl font-medium text-white mt-8 mb-4;
+    @apply font-serif text-xl font-medium text-off-white mt-10 mb-4 tracking-tight;
   }
   .prose h3 {
-    @apply text-lg font-medium text-white mt-6 mb-3;
+    @apply font-serif text-lg font-medium text-off-white mt-8 mb-3 tracking-tight;
   }
   .prose p {
-    @apply text-zinc-400 leading-relaxed mb-4;
+    @apply text-muted leading-relaxed mb-4;
   }
   .prose ul {
-    @apply text-zinc-400 list-disc list-inside mb-4 space-y-1;
+    @apply text-muted list-disc list-inside mb-4 space-y-1;
   }
   .prose ol {
-    @apply text-zinc-400 list-decimal list-inside mb-4 space-y-1;
+    @apply text-muted list-decimal list-inside mb-4 space-y-1;
   }
   .prose a {
-    @apply text-white underline underline-offset-4;
+    @apply text-off-white underline underline-offset-[5px] decoration-white/20 hover:text-accent hover:decoration-accent/50 transition-colors;
   }
   .prose code {
-    @apply bg-zinc-800 px-1.5 py-0.5 rounded text-sm;
+    @apply bg-white/[0.06] px-1.5 py-0.5 rounded text-sm text-off-white;
   }
   .prose pre {
-    @apply bg-zinc-900 p-4 rounded-lg overflow-x-auto mb-4;
+    @apply bg-white/[0.04] border border-hairline p-4 rounded-md overflow-x-auto mb-4;
   }
   .prose blockquote {
-    @apply border-l-2 border-zinc-700 pl-4 italic text-zinc-500 my-4;
+    @apply border-l border-hairline pl-4 italic text-muted-faint my-4;
   }
 </style>
