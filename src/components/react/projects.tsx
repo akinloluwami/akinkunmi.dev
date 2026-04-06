@@ -50,7 +50,7 @@ const Projects = () => {
 
   return (
     <div className="mt-16">
-      <h2 className="text-lg font-medium text-white mb-6">Projects</h2>
+      <h2 className="text-white mb-6 text-lg">Projects</h2>
 
       <div className="space-y-4">
         {projects.map((project) => (
