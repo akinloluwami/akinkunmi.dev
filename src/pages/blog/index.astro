@@ -8,15 +8,20 @@ const posts = (await getCollection('blog'))
 ---
 
 <Layout title="Blog - Akinkunmi">
-  <div class="space-y-6">
+  <h1 class="font-serif text-[clamp(1.75rem,5vw,2.25rem)] font-medium text-off-white tracking-tight mb-10 pb-6 border-b border-hairline">
+    Blog
+  </h1>
+  <div>
     {posts.length === 0 ? (
-      <p class="text-zinc-500">No posts yet.</p>
+      <p class="text-muted text-sm">No posts yet.</p>
     ) : (
       posts.map((post) => (
-        <a href={`/blog/${post.slug}`} class="block">
-          <h2 class="text-white underline underline-offset-4">{post.data.title}</h2>
-          <p class="text-zinc-500 text-sm mt-1">{post.data.description}</p>
-          <time class="text-zinc-600 text-xs mt-1 block">
+        <a href={`/blog/${post.slug}`} class="group block py-5 border-b border-hairline last:border-b-0">
+          <h2 class="font-serif text-lg text-off-white group-hover:text-accent transition-colors">
+            {post.data.title}
+          </h2>
+          <p class="text-muted text-[15px] mt-2 leading-relaxed">{post.data.description}</p>
+          <time class="text-2xs uppercase tracking-[0.12em] text-muted-faint mt-3 block">
             {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </time>
         </a>
