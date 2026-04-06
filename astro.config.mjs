@@ -10,4 +10,7 @@ export default defineConfig({
   output: "server",
   adapter: vercel(),
   integrations: [tailwind(), react(), auth()],
+  server:{
+    allowedHosts:['.outray.app']
+  }
 });
