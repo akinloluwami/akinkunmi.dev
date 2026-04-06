@@ -21,20 +21,22 @@ const Reactions = ({ slug }: ReactionsProps) => {
   };
 
   return (
-    <div className="mt-12 pt-8 border-t border-zinc-800">
-      <p className="text-zinc-500 text-sm mb-4">React to this post</p>
-      <div className="flex gap-2">
+    <div className="mt-14 pt-10 border-t border-hairline">
+      <p className="text-2xs uppercase tracking-[0.14em] text-muted-faint mb-5">
+        Reactions
+      </p>
+      <div className="flex flex-wrap gap-2">
         {emojis.map((emoji) => {
           const count = getCount(emoji);
           return (
             <button
               key={emoji}
               onClick={() => handleReaction(emoji)}
-              className="px-3 py-1.5 rounded-lg border border-zinc-800 hover:border-zinc-700 transition-colors"
+              className="px-3 py-1.5 rounded-md border border-hairline bg-white/[0.02] hover:bg-white/[0.05] transition-colors"
             >
               <span className="mr-1">{emoji}</span>
               {count > 0 && (
-                <span className="text-zinc-500 text-sm">{count}</span>
+                <span className="text-muted text-sm tabular-nums">{count}</span>
               )}
             </button>
           );
