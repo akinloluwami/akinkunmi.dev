@@ -1,11 +1,49 @@
 ---
-import Header from '../components/react/header'
-import Projects from '../components/react/projects'
-import Layout from '../layouts/Layout.astro'
-import Footer from '../components/react/footer'
+import Projects from "../components/react/projects";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/react/footer";
+
+const links = [
+  { title: "GitHub", url: "https://github.com/akinloluwami" },
+  { title: "Email", url: "mailto:akinkunmioye42@gmail.com" },
+  { title: "Twitter", url: "https://twitter.com/akinkunmi" },
+];
 ---
-<Layout title='Akinkunmi'>
-	<Header />
-	<Projects />
-	<Footer />
+
+<Layout title="Akinkunmi">
+  <header class="mb-16 sm:mb-20">
+    <h1
+      class="font-serif text-[clamp(2.125rem,8vw,3.25rem)] font-normal text-off-white leading-[1.08] tracking-[-0.02em] mb-5"
+    >
+      Akinkunmi
+    </h1>
+    <p
+      class="text-2xs uppercase tracking-[0.22em] text-muted mb-10 max-w-md leading-relaxed"
+    >
+      Software engineer
+    </p>
+    <p class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted">
+      {
+        links.map((link, i) => (
+          <>
+            {i > 0 ? (
+              <span class="text-muted-faint/35 select-none text-xs" aria-hidden>
+                ·
+              </span>
+            ) : null}
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              class="text-muted hover:text-accent underline-offset-[5px] decoration-white/20 hover:decoration-accent/60 underline transition-colors"
+            >
+              {link.title}
+            </a>
+          </>
+        ))
+      }
+    </p>
+  </header>
+  <Projects />
+  <Footer />
 </Layout>
