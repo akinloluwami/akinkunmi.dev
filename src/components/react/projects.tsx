@@ -8,6 +8,11 @@ function hostFromUrl(url: string): string {
 
 const Projects = () => {
   const projects = [
+    {
+      title:"Byteship",
+      description:"File uploads, storage and delivery.",
+      url:"https://byteship.dev"
+    },
 {
       title: "Avnac",
       description: "Open-source Canva alternative.",
