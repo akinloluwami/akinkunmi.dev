@@ -17,3 +17,16 @@ body {
   background-color: rgba(196, 181, 157, 0.35);
   color: #f5f2eb;
 }
+
+@keyframes now-playing-wave {
+  0%,
+  100% {
+    transform: scaleY(0.45);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
