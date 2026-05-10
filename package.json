@@ -21,6 +21,7 @@
     "convex": "^1.31.5",
     "dotenv": "^17.2.3",
     "lucide-react": "^0.541.0",
+    "motion": "^12.38.0",
     "perfect-freehand": "^1.2.3",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"

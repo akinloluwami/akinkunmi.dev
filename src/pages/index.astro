@@ -2,6 +2,7 @@
 import Projects from "../components/react/projects";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/react/footer";
+import NowPlaying from "../components/react/NowPlaying";
 
 const links = [
   { title: "GitHub", url: "https://github.com/akinloluwami" },
@@ -72,6 +73,9 @@ const links = [
         ))
       }
     </p>
+    <div class="mt-8 max-w-md">
+      <NowPlaying client:load />
+    </div>
   </header>
   <Projects />
   <Footer />

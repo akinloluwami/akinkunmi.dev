@@ -4,3 +4,19 @@ node_modules
 .env
 .vercel
 dist
+
+# Editor / IDE state
+.vscode
+.idea
+
+# Build output and local caches
+build
+.gradle
+local.properties
+
+# Android generated artifacts
+*.apk
+*.ap_
+*.aab
+*.dex
+captures

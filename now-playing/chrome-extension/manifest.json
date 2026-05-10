@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Now Playing for YouTube Music",
+  "version": "0.1.0",
+  "description": "Posts the current YouTube Music track to a personal Now Playing endpoint.",
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["media-session.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["config.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://music.youtube.com/*",
+    "https://*/*",
+    "http://localhost:*/*"
+  ]
+}
