@@ -73,7 +73,7 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
     }
 
     fetchTrack();
-    const interval = window.setInterval(fetchTrack, 30_000);
+    const interval = window.setInterval(fetchTrack, 10_000);
 
     return () => {
       cancelled = true;
@@ -99,7 +99,11 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isOpen, track]);
 
-  if (!loaded || !track) {
+  if (!loaded) {
+    return null;
+  }
+
+  if (!track) {
     return (
       <section className="flex items-center gap-3 rounded-md border border-hairline bg-white/5 p-4 text-sm text-muted">
         <span>Not listening to anything right now.</span>
