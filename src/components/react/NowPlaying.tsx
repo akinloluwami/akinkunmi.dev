@@ -109,10 +109,7 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
 
   return (
     <>
-      <motion.div
-        layoutId="now-playing-card"
-        className="group flex w-full items-center gap-3 rounded-md border border-hairline bg-white/5 p-4 transition-colors hover:bg-white/[0.07]"
-      >
+      <div className="group flex w-full items-center gap-3 rounded-md border border-hairline bg-white/5 p-4 transition-colors hover:bg-white/[0.07]">
         <button
           type="button"
           onClick={() => {
@@ -125,44 +122,36 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
 
           <div className="flex min-w-0 flex-1 items-center gap-3">
             <div className="min-w-0">
-              <motion.p
-                layoutId="now-playing-kicker"
-                className="truncate text-sm text-muted"
-              >
+              <p className="truncate text-sm text-muted">
                 I&apos;m currently listening to
-              </motion.p>
-              <motion.p
-                layoutId="now-playing-title"
-                className="truncate text-base font-medium text-off-white"
-              >
+              </p>
+              <p className="truncate text-base font-medium text-off-white">
                 {track.title} <span className="text-muted">-</span> {track.artist}
-              </motion.p>
-              <motion.p
-                layoutId="now-playing-source"
-                className="mt-1 text-xs capitalize text-muted-faint"
-              >
+              </p>
+              <p className="mt-1 text-xs capitalize text-muted-faint">
                 {track.source}
-              </motion.p>
+              </p>
             </div>
             <AudioWave className="hidden sm:flex" />
           </div>
         </button>
 
         <MusicLinks track={track} compact />
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {isOpen ? (
-          <motion.div
+          <div
             className="fixed inset-0 z-50 flex items-center justify-center px-5 py-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
           >
             <motion.button
               type="button"
               aria-label="Close now playing"
-              className="absolute inset-0 bg-black-001/80 backdrop-blur-md"
+              className="absolute inset-0 bg-black-001/85"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.16, ease: "easeOut" }}
               onClick={() => {
                 captureNowPlayingEvent("now_playing_modal_closed", track, {
                   close_method: "backdrop"
@@ -172,16 +161,18 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
             />
 
             <motion.div
-              layoutId="now-playing-card"
               role="dialog"
               aria-modal="true"
               aria-label={`Now playing: ${track.title} by ${track.artist}`}
-              className="relative w-full max-w-sm overflow-hidden rounded-md border border-hairline bg-black-001 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.55)]"
-              transition={{ type: "spring", stiffness: 420, damping: 34 }}
+              className="relative w-full max-w-sm overflow-hidden rounded-md border border-hairline bg-black-001 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.55)] will-change-transform [transform:translateZ(0)]"
+              initial={{ opacity: 0, scale: 0.96, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.98, y: 8 }}
+              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
               {track.image ? (
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-20 blur-2xl saturate-150"
+                  className="absolute inset-0 bg-cover bg-center opacity-[0.08] saturate-125"
                   style={{ backgroundImage: `url(${track.image})` }}
                   aria-hidden="true"
                 />
@@ -206,35 +197,26 @@ export default function NowPlaying({ apiUrl = defaultApiUrl }: NowPlayingProps) 
 
                 <div className="mt-5 min-w-0">
                   <div className="flex items-center justify-between gap-4">
-                    <motion.p
-                      layoutId="now-playing-kicker"
-                      className="text-sm text-muted"
-                    >
+                    <p className="text-sm text-muted">
                       I&apos;m currently listening to
-                    </motion.p>
+                    </p>
                     <AudioWave />
                   </div>
-                  <motion.h2
-                    layoutId="now-playing-title"
-                    className="mt-2 text-2xl font-medium leading-tight text-off-white"
-                  >
+                  <h2 className="mt-2 text-2xl font-medium leading-tight text-off-white">
                     {track.title}
-                  </motion.h2>
+                  </h2>
                   <p className="mt-1 text-base text-muted">{track.artist}</p>
                   {track.album ? (
                     <p className="mt-3 text-sm text-muted-faint">{track.album}</p>
                   ) : null}
-                  <motion.p
-                    layoutId="now-playing-source"
-                    className="mt-5 inline-flex rounded-full border border-white/10 px-3 py-1 text-xs capitalize text-muted"
-                  >
+                  <p className="mt-5 inline-flex rounded-full border border-white/10 px-3 py-1 text-xs capitalize text-muted">
                     {track.source}
-                  </motion.p>
+                  </p>
                   <MusicLinks track={track} />
                 </div>
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         ) : null}
       </AnimatePresence>
     </>
@@ -345,24 +327,20 @@ function AlbumCover({
   const dimensions = size === "large" ? "h-72 w-full" : "h-14 w-14";
 
   return (
-    <motion.div
-      layoutId="now-playing-cover-wrap"
-      className={`relative shrink-0 ${dimensions}`}
-    >
+    <div className={`relative shrink-0 ${dimensions}`}>
       <div
         className="absolute inset-0 rounded-md bg-cover bg-center opacity-45 blur-xl saturate-150 transition-opacity duration-500 group-hover:opacity-75"
         style={{ backgroundImage: `url(${image})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-[-1px] rounded-md bg-gradient-to-br from-white/25 via-white/5 to-black/30 opacity-80" />
-      <motion.img
-        layoutId="now-playing-cover"
+      <img
         src={image}
         alt=""
         className="relative h-full w-full rounded-md border border-white/10 object-cover shadow-[0_12px_30px_rgba(0,0,0,0.32)] transition-transform duration-500 group-hover:-rotate-1 group-hover:scale-[1.03]"
         loading="lazy"
       />
-    </motion.div>
+    </div>
   );
 }
 
